@@ -70,3 +70,55 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Logo Animation */
+.animated-logo .logo-outline {
+  stroke: hsl(var(--primary));
+  stroke-width: 1px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease-in-out forwards;
+}
+
+.animated-logo .logo-fill {
+  fill: transparent;
+  animation: fill-accent 0.5s ease-out forwards 1.5s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-accent {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: hsl(var(--accent));
+  }
+}
+
+/* Fade Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; display: none; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease-out forwards;
+}
+
+.animation-delay-3000 {
+    animation-delay: 3s;
+}
