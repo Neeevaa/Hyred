@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { GoogleIcon, HyredLogo } from '@/components/icons';
+import { GoogleIcon } from '@/components/icons';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -18,10 +18,7 @@ export default function LoginPage() {
     <main className="flex min-h-screen w-full items-center justify-center bg-background p-4">
       <div className="w-full max-w-md">
         <Card className="shadow-2xl">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex h-16 w-auto items-center justify-center">
-              <HyredLogo className="h-full w-full object-contain text-primary" />
-            </div>
+          <CardHeader className="text-center pt-8">
             <CardTitle className="text-3xl font-bold">Welcome to Hyred</CardTitle>
             <CardDescription className="text-muted-foreground">Your career ascent starts here.</CardDescription>
           </CardHeader>
