@@ -1,3 +1,4 @@
+
 export interface User {
   id: string;
   name: string;
@@ -66,4 +67,20 @@ export interface Tool {
   name: string;
   description: string;
   tryNowURL: string;
+}
+
+export interface AptitudeCategory {
+  id: string;
+  title: 'Verbal Ability' | 'Logical Reasoning' | 'Quantitative Aptitude';
+  icon: React.ComponentType<{ className?: string }>;
+  questions: Question[];
+}
+
+export interface DSAProblem {
+  id:string;
+  title: string;
+  difficulty: 'Easy' | 'Medium' | 'Hard';
+  description: string;
+  url: string;
+  tags: string[];
 }

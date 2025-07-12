@@ -1,8 +1,9 @@
+
 'use client';
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutGrid, Code, GraduationCap, BookHeart, BarChart2, UserCircle, LogOut } from 'lucide-react';
+import { LayoutGrid, Code, GraduationCap, BookHeart, BarChart2, LogOut, BrainCircuit, Binary } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { mockUser } from '@/lib/mock-data';
@@ -12,6 +13,8 @@ import React from 'react';
 const navItems = [
   { href: '/dashboard', label: 'Home', icon: LayoutGrid },
   { href: '/code-tracks', label: 'Tracks', icon: Code },
+  { href: '/dsa', label: 'DSA', icon: Binary },
+  { href: '/aptitude', label: 'Aptitude', icon: BrainCircuit },
   { href: '/assessments', label: 'Assess', icon: GraduationCap },
   { href: '/soft-skills', label: 'Skills', icon: BookHeart },
   { href: '/stats', label: 'Stats', icon: BarChart2 },
@@ -52,7 +55,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-1 overflow-y-auto p-4 pb-20">{children}</main>
 
       <nav className="fixed bottom-0 left-0 z-10 w-full border-t bg-card shadow-t">
-        <div className="mx-auto grid h-16 max-w-md grid-cols-5 items-center px-2">
+        <div className="mx-auto grid h-16 max-w-md grid-cols-7 items-center px-2">
           {navItems.map(({ href, label, icon: Icon }) => {
             const isActive = pathname === href;
             return (

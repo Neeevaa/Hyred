@@ -1,5 +1,6 @@
-import type { User, CodingTrack, Assessment, SoftSkill, News, Tool } from './types';
-import { Code, Bot, BarChart, Mic, Users } from 'lucide-react';
+
+import type { User, CodingTrack, Assessment, SoftSkill, News, Tool, AptitudeCategory, DSAProblem } from './types';
+import { Code, Bot, BarChart, Mic, Users, BrainCircuit, Type, Sigma } from 'lucide-react';
 
 export const mockUser: User = {
   id: 'user123',
@@ -147,5 +148,136 @@ export const tools: Tool[] = [
     name: 'Google Colab',
     description: 'A free Jupyter notebook environment that requires no setup and runs entirely in the cloud, especially useful for machine learning.',
     tryNowURL: 'https://colab.research.google.com/',
+  },
+];
+
+
+export const aptitudeCategories: AptitudeCategory[] = [
+  {
+    id: 'verbal',
+    title: 'Verbal Ability',
+    icon: Type,
+    questions: [
+      { id: 'v1', question: 'Which word is a synonym for "ephemeral"?', options: ['Eternal', 'Transient', 'Permanent', 'Enduring'], correctAnswer: 'Transient' },
+      { id: 'v2', question: 'Complete the analogy: Pen is to Writer as ____ is to Painter.', options: ['Canvas', 'Brush', 'Studio', 'Color'], correctAnswer: 'Brush' },
+    ],
+  },
+  {
+    id: 'logical',
+    title: 'Logical Reasoning',
+    icon: BrainCircuit,
+    questions: [
+      { id: 'l1', question: 'If all Zips are Zaps and some Zaps are Zops, can we conclude that some Zips are Zops?', options: ['Yes', 'No', 'Cannot be determined'], correctAnswer: 'No' },
+      { id: 'l2', question: 'Find the next number in the series: 2, 6, 12, 20, 30, ?', options: ['40', '42', '44', '46'], correctAnswer: '42' },
+    ],
+  },
+  {
+    id: 'quantitative',
+    title: 'Quantitative Aptitude',
+    icon: Sigma,
+    questions: [
+      { id: 'q1', question: 'A car travels at 60 km/h and covers a distance in 4 hours. How long will it take to cover the same distance at 80 km/h?', options: ['2 hours', '3 hours', '5 hours', '6 hours'], correctAnswer: '3 hours' },
+      { id: 'q2', question: 'If the price of an item is increased by 20% and then decreased by 20%, what is the net percentage change?', options: ['0%', '4% increase', '4% decrease', '2% decrease'], correctAnswer: '4% decrease' },
+    ],
+  },
+];
+
+
+export const dsaProblems: DSAProblem[] = [
+  {
+    id: 'dsa1',
+    title: 'Two Sum',
+    difficulty: 'Easy',
+    description: 'Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.',
+    url: 'https://leetcode.com/problems/two-sum/',
+    tags: ['Array', 'Hash Table'],
+  },
+  {
+    id: 'dsa2',
+    title: 'Valid Parentheses',
+    difficulty: 'Easy',
+    description: 'Given a string s containing just the characters \'(\', \')\', \'{\', \'}\', \'[\' and \']\', determine if the input string is valid.',
+    url: 'https://leetcode.com/problems/valid-parentheses/',
+    tags: ['String', 'Stack'],
+  },
+  {
+    id: 'dsa3',
+    title: 'Merge Two Sorted Lists',
+    difficulty: 'Easy',
+    description: 'Merge two sorted linked lists and return it as a new sorted list.',
+    url: 'https://leetcode.com/problems/merge-two-sorted-lists/',
+    tags: ['Linked List', 'Recursion'],
+  },
+  {
+    id: 'dsa4',
+    title: 'Best Time to Buy and Sell Stock',
+    difficulty: 'Easy',
+    description: 'You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.',
+    url: 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
+    tags: ['Array', 'Dynamic Programming'],
+  },
+  {
+    id: 'dsa5',
+    title: 'Valid Palindrome',
+    difficulty: 'Easy',
+    description: 'A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.',
+    url: 'https://leetcode.com/problems/valid-palindrome/',
+    tags: ['Two Pointers', 'String'],
+  },
+  {
+    id: 'dsa6',
+    title: 'Invert Binary Tree',
+    difficulty: 'Easy',
+    description: 'Given the root of a binary tree, invert the tree, and return its root.',
+    url: 'https://leetcode.com/problems/invert-binary-tree/',
+    tags: ['Tree', 'DFS', 'BFS'],
+  },
+  {
+    id: 'dsa7',
+    title: 'Valid Anagram',
+    difficulty: 'Easy',
+    description: 'Given two strings s and t, return true if t is an anagram of s, and false otherwise.',
+    url: 'https://leetcode.com/problems/valid-anagram/',
+    tags: ['Hash Table', 'String', 'Sorting'],
+  },
+  {
+    id: 'dsa8',
+    title: 'Binary Search',
+    difficulty: 'Easy',
+    description: 'Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.',
+    url: 'https://leetcode.com/problems/binary-search/',
+    tags: ['Array', 'Binary Search'],
+  },
+  {
+    id: 'dsa9',
+    title: 'Linked List Cycle',
+    difficulty: 'Easy',
+    description: 'Given head, the head of a linked list, determine if the linked list has a cycle in it.',
+    url: 'https://leetcode.com/problems/linked-list-cycle/',
+    tags: ['Hash Table', 'Linked List', 'Two Pointers'],
+  },
+  {
+    id: 'dsa10',
+    title: 'Maximum Depth of Binary Tree',
+    difficulty: 'Easy',
+    description: 'Given the root of a binary tree, return its maximum depth.',
+    url: 'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
+    tags: ['Tree', 'DFS', 'BFS'],
+  },
+  {
+    id: 'dsa11',
+    title: 'Single Number',
+    difficulty: 'Easy',
+    description: 'Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.',
+    url: 'https://leetcode.com/problems/single-number/',
+    tags: ['Array', 'Bit Manipulation'],
+  },
+  {
+    id: 'dsa12',
+    title: 'Reverse Linked List',
+    difficulty: 'Easy',
+    description: 'Given the head of a singly linked list, reverse the list, and return the reversed list.',
+    url: 'https://leetcode.com/problems/reverse-linked-list/',
+    tags: ['Linked List', 'Recursion'],
   },
 ];
