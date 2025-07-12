@@ -9,20 +9,27 @@ export const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export const HyredLogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 132 78"
+    viewBox="0 0 293 83"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
+    <g className="logo-h" fill="hsl(var(--primary))">
+      <path d="M0 0H27V38H0V0Z" />
+      <path d="M54 0H81V83H54V0Z" />
+      <path d="M0 45H81V83H0V45Z" />
+    </g>
     <path
-      className="logo-outline"
-      d="M77.5 24.5V0H53V36.5L0 36.5V61H53V78H77.5V41.5H78C82.7231 41.5 87.2131 40.5746 91.2481 38.7963C95.2831 37.018 98.775 34.4373 101.5 31.25C104.225 28.0627 106.125 24.3529 107.075 20.375H107.5V78H132V0H107.5V15.375C106.49 11.4011 104.53 7.77121 101.789 4.81901C99.0483 1.86681 95.6262 0.000969529 91.875 0H78H77.5V24.5Z"
-      fill="currentColor"
-    ></path>
-    <path
-      className="logo-fill"
-      d="M53 36.5L107.5 15.625V20.375C106.125 24.3529 104.225 28.0627 101.5 31.25C98.775 34.4373 95.2831 37.018 91.2481 38.7963C87.2131 40.5746 82.7231 41.5 78 41.5H53V36.5Z"
-      fill="#F56B00"
-    ></path>
+      className="logo-arrow"
+      d="M27 45L40.5 31.5L54 45L60.75 38.25L40.5 18L20.25 38.25L27 45Z"
+      fill="hsl(var(--accent))"
+    />
+    <g className="logo-text" fill="hsl(var(--primary))">
+      <path d="M126.541 82.26V27.42H102.091V21.48H158.851V27.42H134.401V82.26H126.541Z" />
+      <path d="M176.623 82.26V21.48H184.483V82.26H176.623Z" />
+      <path d="M222.064 21.48V82.26H214.204V64.08H196.264V82.26H188.404V21.48H214.204V39.24H196.264V33.3H214.204V58.14H196.264V45.18H222.064V21.48Z" />
+      <path d="M260.672 21.48L242.012 55.08L223.532 21.48H234.332L242.012 37.8L249.752 21.48H260.672Z" />
+      <path d="M292.905 21.48V82.26H285.045V64.08H267.105V82.26H259.245V21.48H285.045V39.24H267.105V33.3H285.045V58.14H267.105V45.18H292.905V21.48Z" />
+    </g>
   </svg>
 );
