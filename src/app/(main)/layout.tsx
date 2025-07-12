@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { mockUser } from '@/lib/mock-data';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { HyredLogoIcon } from '@/components/icons';
 
 const navItems = [
   { href: '/dashboard', label: 'Home', icon: LayoutGrid },
@@ -29,13 +30,16 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   const getPageTitle = () => {
     const currentNavItem = navItems.find(item => pathname.startsWith(item.href));
     if (pathname.includes('/tools')) return 'AI Tool Suggester';
-    return currentNavItem ? currentNavItem.label : 'Student Ascent';
+    return currentNavItem ? currentNavItem.label : 'Hyred';
   }
 
   return (
     <div className="flex h-screen w-full flex-col bg-background">
       <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b bg-card px-4 shadow-sm">
-        <h1 className="text-xl font-bold text-foreground">{getPageTitle()}</h1>
+        <div className="flex items-center gap-2">
+          <HyredLogoIcon className="h-8 w-8 text-primary" />
+          <h1 className="text-xl font-bold text-foreground">{getPageTitle()}</h1>
+        </div>
         <div className="flex items-center gap-2">
             <Avatar>
               <AvatarImage src={mockUser.avatarUrl} alt={mockUser.name} />

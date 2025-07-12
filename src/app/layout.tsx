@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Student Ascent',
-  description: 'Level Up Your Journey',
+  title: 'Hyred',
+  description: 'Your career ascent starts here',
 };
 
 export default function RootLayout({
