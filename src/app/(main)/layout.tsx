@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { mockUser } from '@/lib/mock-data';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 
 const navItems = [
   { href: '/dashboard', label: 'Home', icon: LayoutGrid },
@@ -42,6 +43,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           <h1 className="text-xl font-bold text-foreground">{getPageTitle()}</h1>
         </div>
         <div className="flex items-center gap-2">
+            <ThemeSwitcher />
             <Avatar>
               <AvatarImage src={mockUser.avatarUrl} alt={mockUser.name} />
               <AvatarFallback>{mockUser.name.charAt(0)}</AvatarFallback>

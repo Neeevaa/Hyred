@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { mockUser } from '@/lib/mock-data';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 
 const navItems = [
   { href: '/admin/dashboard', label: 'Overview', icon: LayoutGrid },
@@ -59,6 +60,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <h1 className="text-xl font-bold text-foreground">{getPageTitle()}</h1>
             </div>
             <div className="flex items-center gap-4">
+                <ThemeSwitcher />
                 <Avatar>
                     <AvatarImage src="https://placehold.co/100x100.png" alt="Admin" />
                     <AvatarFallback>A</AvatarFallback>
