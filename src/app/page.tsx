@@ -1,29 +1,14 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { GoogleIcon, HyredLogoIcon } from '@/components/icons';
+import { GoogleIcon } from '@/components/icons';
 
-function SplashScreen() {
-    return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background animate-fade-out animation-delay-3000">
-            <HyredLogoIcon className="h-24 w-auto text-primary animated-logo" />
-        </div>
-    )
-}
 
 export default function LoginPage() {
   const router = useRouter();
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-        setShowSplash(false);
-    }, 3500); // Should be slightly longer than animation
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleLogin = () => {
     // In a real app, this would involve Firebase Auth.
@@ -31,16 +16,11 @@ export default function LoginPage() {
     router.push('/dashboard');
   };
 
-  if (showSplash) {
-      return <SplashScreen />;
-  }
-
   return (
     <main className="flex min-h-screen w-full items-center justify-center bg-background p-4 animate-fade-in">
       <div className="w-full max-w-md">
         <Card className="shadow-2xl">
           <CardHeader className="text-center pt-8 space-y-4">
-             <HyredLogoIcon className="h-12 w-auto text-primary mx-auto" />
             <CardTitle className="text-3xl font-bold">Welcome to Hyred</CardTitle>
             <CardDescription className="text-muted-foreground">Your career ascent starts here.</CardDescription>
           </CardHeader>
