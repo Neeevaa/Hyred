@@ -14,16 +14,19 @@ export interface User {
   codingTrack: string;
 }
 
+export interface Question {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: string;
+}
+
 export interface Assessment {
   id: string;
   title: string;
   topic: string;
   level: 'Beginner' | 'Intermediate' | 'Advanced';
-  questions: {
-    question: string;
-    options: string[];
-    correctAnswer: string;
-  }[];
+  questions: Question[];
 }
 
 export interface SoftSkill {

@@ -58,21 +58,21 @@ export const assessments: Assessment[] = [
     title: 'JavaScript Basics Quiz',
     topic: 'JavaScript',
     level: 'Beginner',
-    questions: [{ question: 'What is a closure?', options: ['A', 'B', 'C'], correctAnswer: 'A' }],
+    questions: [], // Questions are loaded from quiz-data.ts
   },
   {
     id: 'assess2',
     title: 'Python Data Structures',
     topic: 'Python',
     level: 'Intermediate',
-    questions: [{ question: 'What is a dictionary?', options: ['A', 'B', 'C'], correctAnswer: 'B' }],
+    questions: [], // Questions are loaded from quiz-data.ts
   },
   {
     id: 'assess3',
     title: 'Advanced React Concepts',
     topic: 'React',
     level: 'Advanced',
-    questions: [{ question: 'What are hooks?', options: ['A', 'B', 'C'], correctAnswer: 'C' }],
+    questions: [], // Questions are loaded from quiz-data.ts
   },
 ];
 

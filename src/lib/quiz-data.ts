@@ -2,6 +2,47 @@
 import { Question } from './types';
 
 export const quizzes: { [key: string]: { [key: string]: Question[] } } = {
+  'JavaScript': {
+    'Beginner': [
+      {
+        id: 'js-b-1',
+        question: 'Which of the following is NOT a primitive data type in JavaScript?',
+        options: [
+          'String',
+          'Number',
+          'Object',
+          'Boolean',
+        ],
+        correctAnswer: 'Object',
+      },
+      {
+        id: 'js-b-2',
+        question: 'What does the `===` operator do?',
+        options: [
+          'Compares two values for equality, without performing type conversion.',
+          'Assigns a value to a variable.',
+          'Compares two values for equality, after performing type conversion.',
+          'Checks if a value is greater than another.',
+        ],
+        correctAnswer: 'Compares two values for equality, without performing type conversion.',
+      },
+    ],
+  },
+  'Python': {
+    'Intermediate': [
+       {
+        id: 'py-i-1',
+        question: 'What is a dictionary in Python?',
+        options: [
+          'An ordered collection of items.',
+          'A collection of key-value pairs.',
+          'A collection of unique items.',
+          'A first-in, first-out data structure.',
+        ],
+        correctAnswer: 'A collection of key-value pairs.',
+      },
+    ]
+  },
   'React': {
     'Beginner': [
       {
