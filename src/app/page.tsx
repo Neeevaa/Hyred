@@ -1,3 +1,45 @@
-export default function Home() {
-  return <></>;
+'use client';
+
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { GoogleIcon } from '@/components/icons';
+import { Rocket } from 'lucide-react';
+
+export default function LoginPage() {
+  const router = useRouter();
+
+  const handleLogin = () => {
+    // In a real app, this would involve Firebase Auth.
+    // For this prototype, we'll just navigate to the dashboard.
+    router.push('/dashboard');
+  };
+
+  return (
+    <main className="flex min-h-screen w-full items-center justify-center bg-background p-4">
+      <div className="w-full max-w-md">
+        <Card className="shadow-2xl">
+          <CardHeader className="text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Rocket className="h-8 w-8" />
+            </div>
+            <CardTitle className="text-3xl font-bold">Student Ascent</CardTitle>
+            <CardDescription className="text-muted-foreground">Level Up Your Learning Journey</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6 p-6">
+            <p className="text-center text-sm text-muted-foreground">
+              Sign in to unlock your potential, track your progress, and discover tools to help you succeed.
+            </p>
+            <Button
+              onClick={handleLogin}
+              className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <GoogleIcon className="mr-3 h-6 w-6" />
+              Sign in with Google
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    </main>
+  );
 }
