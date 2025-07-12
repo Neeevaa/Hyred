@@ -19,8 +19,8 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <Card className="shadow-2xl">
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex h-20 w-auto items-center justify-center text-primary">
-              <HyredLogo className="h-full w-auto" />
+            <div className="mx-auto mb-4 flex h-16 w-auto items-center justify-center">
+              <HyredLogo className="h-full w-full object-contain text-primary" />
             </div>
             <CardTitle className="text-3xl font-bold">Welcome to Hyred</CardTitle>
             <CardDescription className="text-muted-foreground">Your career ascent starts here.</CardDescription>
