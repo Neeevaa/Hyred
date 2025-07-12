@@ -23,7 +23,7 @@ const SuggestAiToolsInputSchema = z.object({
     z.object({
       name: z.string(),
       description: z.string(),
-      tryNowURL: z.string().url(),
+      tryNowURL: z.string(),
     })
   ).describe('A list of available tools to choose from.'),
 });
@@ -34,7 +34,7 @@ const SuggestAiToolsOutputSchema = z.object({
     z.object({
       name: z.string(),
       description: z.string(),
-      tryNowURL: z.string().url(),
+      tryNowURL: z.string(),
     })
   ).describe('A list of suggested tools.'),
   reasoning: z.string().describe('The reasoning behind the tool suggestions.'),
